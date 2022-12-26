@@ -1,5 +1,7 @@
 import { useState, useCallback } from "react";
 import api from './plugins/axios';
+import InputMask from 'react-input-mask';
+
 
 function Conta(){
 
@@ -50,13 +52,22 @@ function Conta(){
     });
     
     return(
+        
         <>
+        
             <form>
+                <div>
+                    <h1>Extrato da Conta</h1>
+                </div><br></br>
                 <input type='date' onChange={handleStartChanging} value={dateStart.value} placeholder='Data de início'/>
                 <input type='date' onChange={handleEndChanging} value={dateEnd.value} placeholder='Data de Fim'/>
-                <input id="idAccount" type='number' value={value.value} onChange={handleChanging} placeholder='Nome operador transacionado'/>
+                <input id="idAccount" type='number' value={value.value} onChange={handleChanging} placeholder='Numero da conta operador transacionado'/>
 
                 <input type='button' onClick={getContas} value='Pesquisar' className='btn btn-primary'/>
+                <div>
+                <html>Total da conta: </html>
+                <html>Total da das transferencias: </html>
+                </div>
             </form>
             
             <table className='table'>
