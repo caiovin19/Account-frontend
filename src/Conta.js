@@ -65,7 +65,7 @@ function Conta(){
 
                 <input type='button' onClick={getContas} value='Pesquisar' className='btn btn-primary'/>
                 <div>
-                <html>Total da conta: {conta.soma}</html>
+                <html>Total da conta: R${conta.soma}</html>
                 <html>Total da das transferencias:{conta.transferencias.valorTransf} </html>
                 </div>
             </form>
