@@ -65,8 +65,8 @@ function Conta(){
 
                 <input type='button' onClick={getContas} value='Pesquisar' className='btn btn-primary'/>
                 <div>
-                <html>Total da conta: </html>
-                <html>Total da das transferencias: </html>
+                <html>Total da conta: {conta.soma}</html>
+                <html>Total da das transferencias:{conta.transferencias.valorTransf} </html>
                 </div>
             </form>
             
@@ -85,7 +85,7 @@ function Conta(){
                                 return (
                                     <>
                                         <tr key={conta.transferencias.length}>
-                                            <th scope="row">{conta.idConta}</th>
+                                            <th scope="row">{data.dataTransferencia}</th>
                                             <td>R$ {data.valor}</td>
                                             <td>{data.tipo}</td>
                                             <td>{conta.nomeResponsavel}</td>
